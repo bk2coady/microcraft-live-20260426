@@ -9,8 +9,8 @@ export default function Home() {
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1736390800504-d3963b553aa3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
-            alt="Modern renovated kitchen"
+            src="/images/home-hero.jpg"
+            alt="White heritage home in autumn"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-slate-900/70" />
