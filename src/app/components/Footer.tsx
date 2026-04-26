@@ -44,7 +44,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-amber-500 shrink-0" />
-                <span>info@microcraft.com</span>
+                <span>microcraft.rennos@gmail.com</span>
               </li>
             </ul>
           </div>

@@ -29,20 +29,6 @@ This project is ready for Cloudflare Pages static hosting.
 - Security headers are set through [`public/_headers`](./public/_headers).
 - Cloudflare Pages config is stored in [`wrangler.jsonc`](./wrangler.jsonc).
 
-## Contact Form
-
-The contact form posts to a Cloudflare Pages Function at `/api/contact`, which sends email through Resend.
-
-Add these production environment variables in Cloudflare Pages:
-
-```txt
-RESEND_API_KEY=your_resend_api_key
-CONTACT_TO_EMAIL=info@microcraft.com
-CONTACT_FROM_EMAIL=MicroCraft Website <website@mail.microcraftrenos.com>
-```
-
-Do not commit real API keys to this repository.
-
 ## Next Launch Steps
 
 1. Push this repository to GitHub.
