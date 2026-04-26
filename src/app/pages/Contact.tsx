@@ -9,20 +9,37 @@ interface ContactFormData {
   email: string;
   service: string;
   message: string;
+  company?: string;
 }
 
 export default function Contact() {
-  const { register, handleSubmit, reset } = useForm<ContactFormData>();
+  const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm<ContactFormData>();
   const address = '21 William St, Elmira ON N3B 1P1';
   const encodedAddress = encodeURIComponent(address);
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
   const appleMapsUrl = `https://maps.apple.com/?q=${encodedAddress}`;
 
-  const onSubmit = (data: ContactFormData) => {
-    // Simulate form submission
-    console.log(data);
-    toast.success("Message sent! We'll get back to you soon.");
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(result?.message ?? 'Unable to send your message right now.');
+      }
+
+      toast.success("Message sent! We'll get back to you soon.");
+      reset();
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Unable to send your message right now.');
+    }
   };
 
   return (
@@ -144,6 +161,14 @@ export default function Contact() {
           >
             <h2 className="text-2xl font-bold text-slate-900 mb-6">Send a Message</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <input
+                {...register("company")}
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Name</label>
@@ -205,9 +230,10 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-slate-900 text-white py-3 px-6 rounded-md font-bold hover:bg-slate-800 transition-colors flex items-center justify-center shadow-lg"
+                disabled={isSubmitting}
+                className="w-full bg-slate-900 text-white py-3 px-6 rounded-md font-bold hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-500 transition-colors flex items-center justify-center shadow-lg"
               >
-                Send Message <Send className="ml-2 h-4 w-4" />
+                {isSubmitting ? 'Sending...' : 'Send Message'} <Send className="ml-2 h-4 w-4" />
               </button>
             </form>
           </motion.div>
