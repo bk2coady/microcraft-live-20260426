@@ -3,15 +3,6 @@ import { Link } from 'react-router';
 import { CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export default function Renos() {
-  const images = [
-    "/images/home-renovation.jpg",
-    "/images/home-radon.jpg",
-    "https://images.unsplash.com/photo-1736390800504-d3963b553aa3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    "https://images.unsplash.com/photo-1762418362644-a4daad168fb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    "https://images.unsplash.com/photo-1767082090928-f2eeef2270f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-  ];
-
   const services = [
     {
       title: "Kitchen Remodeling",
@@ -110,34 +101,6 @@ export default function Renos() {
           {/* Background decoration */}
           <ShieldCheck className="absolute -right-10 -bottom-10 h-64 w-64 text-slate-800 opacity-50 rotate-12" />
         </motion.div>
-
-        {/* Gallery Section */}
-        <div className="mb-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900">Our Portfolio</h2>
-            <p className="text-slate-500 mt-2">Highlights from our recent projects</p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {images.map((image, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
-              >
-                <img
-                  src={image}
-                  alt={`Project ${i + 1}`}
-                  className="h-72 w-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
 
         {/* CTA */}
         <div className="bg-slate-200 rounded-2xl p-8 md:p-12 text-center">

@@ -8,8 +8,8 @@ export default function Radon() {
       <div className="relative bg-slate-900 text-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
-            src="https://images.unsplash.com/photo-1686853301262-7a19b182337d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
-            alt="Radon Testing"
+            src="/images/radon-hero.webp"
+            alt="Finished basement living space"
             className="w-full h-full object-cover"
           />
         </div>
@@ -57,13 +57,12 @@ export default function Radon() {
             </ul>
           </div>
           <div className="bg-slate-100 rounded-xl p-8 border border-slate-200 shadow-sm">
-             <div className="flex items-center justify-center h-64 bg-slate-200 rounded-lg mb-6 relative overflow-hidden">
-                {/* Placeholder for infographic or image */}
-                <img
-                  src="https://images.unsplash.com/photo-1538806932492-b6ac36ccfa28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
-                  alt="Radon Infographic Placeholder"
-                  className="absolute inset-0 w-full h-full object-cover opacity-50"
-                />
+	             <div className="flex items-center justify-center h-64 bg-slate-200 rounded-lg mb-6 relative overflow-hidden">
+	                <img
+	                  src="/images/radon-sign.jpg"
+	                  alt="Radon warning sign"
+	                  className="absolute inset-0 w-full h-full object-cover opacity-60"
+	                />
                 <div className="relative z-10 bg-white/90 p-4 rounded shadow-lg text-center">
                   <span className="block text-4xl font-bold text-slate-900 mb-1">4 pCi/L</span>
                   <span className="text-xs text-slate-500 uppercase tracking-wide">Action Level</span>
