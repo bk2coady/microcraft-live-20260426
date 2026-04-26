@@ -33,18 +33,26 @@ export default function Renos() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Header */}
-      <div className="bg-slate-900 text-white py-20 px-4 text-center">
-        <motion.h1
+      <div className="relative overflow-hidden text-white py-24 px-4 text-center">
+        <img
+          src="/images/home-renovation.jpg"
+          alt="Kitchen renovation in progress"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-900/65" />
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-bold mb-4"
+          className="relative z-10"
         >
-          Home <span className="text-amber-500">Renovations</span>
-        </motion.h1>
-        <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-          <span className="block">Quality craftsmanship for every room in your house.</span>
-          <span className="block">We bring your vision to life.</span>
-        </p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Home <span className="text-amber-500">Renovations</span>
+          </h1>
+          <p className="text-xl text-slate-200 max-w-2xl mx-auto">
+            <span className="block">Quality craftsmanship for every room in your house.</span>
+            <span className="block">We bring your vision to life.</span>
+          </p>
+        </motion.div>
       </div>
 
       {/* Services Detail */}
