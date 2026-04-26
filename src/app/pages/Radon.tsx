@@ -64,12 +64,12 @@ export default function Radon() {
 	                  className="absolute inset-0 w-full h-full object-cover opacity-60"
 	                />
                 <div className="relative z-10 bg-white/90 p-4 rounded shadow-lg text-center">
-                  <span className="block text-4xl font-bold text-slate-900 mb-1">4 pCi/L</span>
+                  <span className="block text-4xl font-bold text-slate-900 mb-1">200 Bq/m^3</span>
                   <span className="text-xs text-slate-500 uppercase tracking-wide">Action Level</span>
                 </div>
              </div>
              <p className="text-sm text-slate-500 text-center italic">
-               The EPA recommends fixing your home if radon levels are 4 pCi/L or higher.
+               Health Canada recommends taking action if radon levels are 200 Bq/m^3 or higher.
              </p>
           </div>
         </div>
