@@ -52,10 +52,23 @@ export function Footer() {
           {/* Certifications */}
           <div>
              <h4 className="text-white font-semibold mb-4 uppercase tracking-wider text-sm">Certified</h4>
-             <div className="flex space-x-2">
-               {/* Placeholders for certification logos */}
-               <div className="w-12 h-12 bg-slate-800 rounded flex items-center justify-center text-xs text-center border border-slate-700 text-slate-500">C-NRPP</div>
-               <div className="w-12 h-12 bg-slate-800 rounded flex items-center justify-center text-xs text-center border border-slate-700 text-slate-500">CARST</div>
+             <div className="flex items-center gap-3">
+               <div className="h-14 w-20 rounded bg-white p-1.5 shadow-sm">
+                 <img
+                   src="/images/c-nrpp-logo.webp"
+                   alt="C-NRPP certification logo"
+                   className="h-full w-full object-contain"
+                   loading="lazy"
+                 />
+               </div>
+               <div className="h-14 w-20 rounded bg-white p-1.5 shadow-sm">
+                 <img
+                   src="/images/carst-logo.webp"
+                   alt="CARST certification logo"
+                   className="h-full w-full object-contain"
+                   loading="lazy"
+                 />
+               </div>
              </div>
           </div>
 

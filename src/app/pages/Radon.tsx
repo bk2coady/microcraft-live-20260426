@@ -140,19 +140,25 @@ export default function Radon() {
            </div>
         </div>
 
-        {/* Certifications Placeholder */}
+        {/* Certifications */}
         <div className="text-center mb-16">
           <h3 className="text-xl font-semibold text-slate-900 mb-8 uppercase tracking-wide">Certified Professionals</h3>
-          <div className="flex flex-wrap justify-center gap-8 items-center opacity-75 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Logo Placeholders */}
-            <div className="h-24 w-40 bg-slate-200 rounded flex items-center justify-center border-2 border-dashed border-slate-300">
-              <span className="text-slate-400 font-bold">C-NRPP Logo</span>
+          <div className="flex flex-wrap justify-center gap-8 items-center">
+            <div className="h-28 w-48 rounded-lg bg-white p-4 shadow-md border border-slate-200">
+              <img
+                src="/images/c-nrpp-logo.webp"
+                alt="C-NRPP certification logo"
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
             </div>
-            <div className="h-24 w-40 bg-slate-200 rounded flex items-center justify-center border-2 border-dashed border-slate-300">
-              <span className="text-slate-400 font-bold">CARST Logo</span>
-            </div>
-            <div className="h-24 w-40 bg-slate-200 rounded flex items-center justify-center border-2 border-dashed border-slate-300">
-              <span className="text-slate-400 font-bold">State License</span>
+            <div className="h-28 w-48 rounded-lg bg-white p-4 shadow-md border border-slate-200">
+              <img
+                src="/images/carst-logo.webp"
+                alt="CARST certification logo"
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
